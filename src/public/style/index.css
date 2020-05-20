@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+* input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+body {
+  overflow: hidden;
+  background-color: #303841;
+  height: 100vw;
+  width: 100vw;
+}
+.container {
+  display: grid;
+  grid-template-columns: 3fr 0fr 1fr 1fr;
+  grid-template-rows: 0.4fr 2fr 0.6fr;
+  gap: 1px 1px;
+  grid-template-areas: "header header header preco" "tabela tabela tabela preco" "footer footer footer footer";
+}
+.header {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 14vh;
+  width: 80vw;
+}
+.header h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 7vh;
+  width: 60vw;
+  background-color: white;
+  font-size: 1.6rem;
+  letter-spacing: 1rem;
+}
+.preco {
+  grid-area: preco;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.preco .estilo-preco {
+  height: 15vh;
+  width: 15vw;
+  background-color: white;
+  margin: 3vh 0;
+}
+.preco .estilo-preco h3 {
+  border-bottom: 1px solid black;
+}
+.preco .estilo-preco p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 11.5vh;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.preco .estilo-preco input[type=number] {
+  height: 11.2vh;
+  border: none;
+  font-size: 2.5rem;
+  width: 15vw;
+  text-align: center;
+}
+.footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 16vh;
+}
+.footer #preco {
+  margin-top: 1.5vh;
+  color: white;
+  font-size: 4rem;
+}
+.footer #codigo-de-barra {
+  height: 12vh;
+  background-color: white;
+  text-align: center;
+}
+.footer #codigo-de-barra h1 {
+  text-align: center;
+}
+.footer #codigo-de-barra input {
+  text-align: center;
+  font-size: 1.6rem;
+  height: 8vh;
+  width: 17vw;
+}
+.footer #dinheiro {
+  height: 12vh;
+  background-color: white;
+  text-align: center;
+}
+.footer #dinheiro h1 {
+  text-align: center;
+}
+.footer #dinheiro input {
+  text-align: center;
+  font-size: 1.6rem;
+  height: 8vh;
+  width: 17vw;
+}
+.footer #cancelar {
+  height: 7vh;
+  width: 9vw;
+  border: none;
+}
+.footer #concluir {
+  height: 7vh;
+  width: 9vw;
+  border: none;
+}
+.tabela {
+  grid-area: tabela;
+  background-color: white;
+  width: 80vw;
+  height: 70vh;
+}
+.tabela table {
+  width: 80vw;
+  text-align: center;
+  border-collapse: collapse;
+  overflow-y: scroll;
+}
+.tabela table .estilo-tabela {
+  border-left: solid 1px black;
+  border-bottom: solid 1px black;
+}
+.tabela table tr th {
+  border-left: solid 1px black;
+  border-bottom: solid 1px black;
+}
+.tabela table tr td {
+  border-left: solid 1px black;
+  border-bottom: solid 1px black;
+}
+.tabela table #codigo {
+  width: 10vw;
+}
+.tabela table #qtd {
+  width: 5vw;
+}
+.tabela table #unitario {
+  width: 10vw;
+}
+.tabela table #total {
+  width: 10vw;
+}
