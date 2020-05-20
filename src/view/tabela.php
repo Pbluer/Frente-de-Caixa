@@ -4,15 +4,12 @@
 
     function adicionarTabela(){
         require_once(realpath(DATABASE_PATH . '/database.php'));
-        $tabela = DataBase::codigoDeBarra($_POST['codigo-de-barra']);
-        return $tabela;
-    }
-
-    if (isset($_POST['codigo-de-barra'])) {
-        $tabelas = adicionarTabela();
+        return DataBase::codigoDeBarra($_POST['codigo-de-barra']);
     }
     
-    print_r($tabelas);
+    if (isset($_POST['codigo-de-barra'])) {
+       $tabelas = adicionarTabela();
+    }
 ?>
 
 <?php foreach ($tabelas as $produto) : ?>
