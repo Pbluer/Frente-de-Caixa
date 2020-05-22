@@ -46,10 +46,8 @@ require_once('C:\xampp\htdocs\Frente-de-Caixa\src\controller\controller.php');
             <table>
                 <tr>
                     <th id="codigo">CÓDIGO</th>
-                    <th id="qtd">QTD</th>
                     <th>PRODUTO</th>
-                    <th id="unitario">UNITÁRIO</th>
-                    <th id="total">TOTAL</th>       
+                    <th id="unitario">UNITÁRIO</th>     
                 </tr>
                <?php require("C:/xampp/htdocs/Frente-de-Caixa/src/view/tabela.php") ?>
             </table>

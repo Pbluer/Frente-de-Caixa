@@ -35,24 +35,36 @@ class DataBase{
         return $produtos;
     }
 
-    public function codigoDeBarra($codigo){
-        
+    public function getTabela(){
+
+        $query = "SELECT * FROM tabela";
         $sql = DataBase::conexao();
-        $query = "SELECT * FROM produto WHERE (`codigo` = $codigo)";        
-        $resultado =  $sql->query($query);
-        
-        $tabela = [];
+        $resultado = $sql->query($query);
+
+        $produtos= [];
 
         if($resultado->num_rows > 0){
             while($row = $resultado->fetch_assoc()){
-                $tabela[] = $row;
+                $produtos[] = $row;
             }
         }elseif($sql->error){
             echo "Error: " . $sql->error;
         }  
         
-        return $tabela;
+        return $produtos;
+    }
 
+    public function codigoDeBarra($codigo){
+        
+        $sql = DataBase::conexao();
+        $query = "INSERT INTO `produtos`.`tabela` (`codigo`, `produto`,`valor`) SELECT `codigo`,`produto`,`valor` FROM `produtos`.`produto` WHERE  (`codigo` = $codigo);";        
+        $resultado =  $sql->query($query);
+
+        if($resultado){
+            return DataBase::getTabela();
+        }elseif($sql->error){
+            echo "Error: " . $sql->error;
+        }
     }
     
 }

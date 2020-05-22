@@ -1,23 +1,18 @@
-<?php
+<?php 
+    require_once("./controller/codigoDeBarra.php");
 
-    $tabelas = [];
-
-    function adicionarTabela(){
-        require_once(realpath(DATABASE_PATH . '/database.php'));
-        return DataBase::codigoDeBarra($_POST['codigo-de-barra']);
-    }
-    
-    if (isset($_POST['codigo-de-barra'])) {
-       $tabelas = adicionarTabela();
+    if(isset($dados)){
+        unset($_POST['codigo-de-barra']);
+        $tabela = $dados;
     }
 ?>
 
-<?php foreach ($tabelas as $produto) : ?>
-    <tr>
-        <td><?= $produto['codigo'] ?></td>
-        <td><?= $produto['quantidade'] ?></td>
-        <td><?= $produto['produto'] ?></td>
-        <td>R$ <?= $produto['valor'] ?></td>
-        <td>R$ <?= $produto['valor'] ?></td>
-    </tr>
-<?php endforeach ?>
+<?php if(isset($tabela)): ?>
+    <?php foreach ($tabela as $produto) : ?>
+        <tr>
+            <td><?= $produto["codigo"] ?></td>
+            <td><?= $produto['produto'] ?></td>
+            <td>R$ <?= $produto['valor'] ?></td>
+        </tr>
+    <?php endforeach ?>
+<?php endif ?>
