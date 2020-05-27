@@ -1,6 +1,6 @@
 <?php
     require(realpath(DATABASE_PATH. '/database.php'));
-    $valorTotal = [];
+    $valorTotal = [];    
 
     if(isset($_POST['codigo-de-barra'])){
         $dados = DataBase::codigoDeBarra($_POST['codigo-de-barra']);
@@ -12,5 +12,5 @@
         }
     }
 
-
+    $valorSomado = floatval(array_sum($valorTotal));
     

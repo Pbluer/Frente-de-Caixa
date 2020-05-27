@@ -1,0 +1,37 @@
+body {
+  color: white;
+  background-color: #636363;
+}
+body .container header {
+  font-weight: 700;
+}
+body .container header h1 {
+  font-size: 2.5rem;
+  letter-spacing: 1vw;
+  text-align: center;
+}
+body .container div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
+body .container div .estilo-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #636363;
+  background-color: white;
+  font-size: 2rem;
+  margin: 15px 0;
+  width: 20vw;
+  max-height: 10vh;
+  padding: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+body .container div .estilo-btn img {
+  width: 15%;
+}
