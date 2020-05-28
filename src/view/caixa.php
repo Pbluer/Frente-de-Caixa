@@ -13,6 +13,7 @@
 <body>
 
     <div class="container">
+        <div id="status"></div>
         <div class="tabela">
             <table>
                 <thead>
@@ -34,18 +35,18 @@
 
         <div class="entrada">
             
-            <form method="POST" id="codigo-de-barra">
+            <div class="codigo-de-barra">
                 <h4>CÓDIGO DE BARRA</h4>
-                <input type="number">
-            </form>
-
+                <input type="number" id="codigo-de-barra">
+                <button type="submit" onclick="teste()">teste</button>
+            </div>
             
             <div id="total">
                 <h4>TOTAL</h4>
                 <p>R$ 8,79</p>
             </div>
 
-            <form action="" id="dinheiro">
+            <form id="dinheiro">
                 <h4>DINHEIRO</h4>
                 <input type="number" value="20">
             </form>
@@ -64,8 +65,8 @@
 
     </div>
     
-
-
+    <script src="../public/script/xhttp.js"></script>
+    <script src="../public/script/caixa.js"></script>
 
 </body>
 </html>

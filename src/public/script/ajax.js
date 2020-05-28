@@ -1,1 +1,0 @@
-var xhttp = new XMLHttpRequest;

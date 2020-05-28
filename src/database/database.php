@@ -2,7 +2,7 @@
 
 class DataBase{
 
-    public function conexao(){
+    public static function conexao(){
         $dados = parse_ini_file('default.ini');
 
         $sql = mysqli_connect($dados['host'],$dados['user'],$dados['password'],$dados['database']);
@@ -15,8 +15,7 @@ class DataBase{
     
     }
 
-
-    public function getProdutos(){
+    function getProdutos(){
 
         $query = "SELECT * FROM produto";
         $sql = DataBase::conexao();
@@ -35,7 +34,7 @@ class DataBase{
         return $produtos;
     }
 
-    public function getTabela(){
+    function getTabela(){
 
         $query = "SELECT * FROM tabela";
         $sql = DataBase::conexao();
@@ -51,10 +50,10 @@ class DataBase{
             echo "Error: " . $sql->error;
         }  
         
-        return $produtos;
+        return json_encode($produtos);
     }
 
-    public function codigoDeBarra($codigo){
+    function codigoDeBarra($codigo){
         
         $sql = DataBase::conexao();
         $query = "INSERT INTO `produtos`.`tabela` (`codigo`, `produto`,`valor`) SELECT `codigo`,`produto`,`valor` FROM `produtos`.`produto` WHERE  (`codigo` = $codigo);";        
