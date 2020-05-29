@@ -13,28 +13,37 @@
 <body>
 
     <div class="container">
-        <div id="status"></div>
-        <div class="tabela" >
-            <table>                
-                <tr>
-                    <th id="codigo">CÓDIGO</th>
-                    <th id="produto">PRODUTO</th>
-                    <th id="unitario">UNITÁRIO</th>
-                </tr>
-                <tbody id ="produtos">
 
-                </tbody>
-                                
-            </table>
-        </div>
+        <table class="tabela" >
+            
+            <tr>
+                <td>
+                    <table>
+                        <tr>
+                            <th id="codigo">CÓDIGO</th>
+                            <th id="produto">PRODUTO</th>
+                            <th id="unitario">UNITÁRIO</th>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <div class="tabela-produtos" style="overflow: auto;">
+                        <table id ="produtos">
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </table>
 
         <div class="entrada">
             
-            <div class="codigo-de-barra">
+            <form onsubmit="codigoDeBarra()" class="codigo-de-barra">
                 <h4>CÓDIGO DE BARRA</h4>
-                <input type="number" id="codigo-de-barra">
-                <button type="submit" onclick="codigoDeBarra()">teste</button>
-            </div>
+                <input type="number" id="codigo-de-barra" >                
+            </form>
             
             <div id="total">
                 <h4>TOTAL</h4>
@@ -43,7 +52,8 @@
 
             <form id="dinheiro">
                 <h4>DINHEIRO</h4>
-                <input type="number" value="20">
+                <input type="number">
+                <button onclick="codigoDeBarra()">Enviar</button>
             </form>
 
             <div id="subtotal">

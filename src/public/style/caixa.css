@@ -1,3 +1,6 @@
+*::-webkit-scrollbar {
+  width: 0px;
+}
 body {
   background-color: #e6e6e6;
   text-align: center;
@@ -12,6 +15,14 @@ body .container .tabela {
   height: 68vh;
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.219);
+  text-align: center;
+}
+body .container .tabela .tabela-produtos {
+  overflow: auto;
+  height: 63vh;
+}
+body .container .tabela .tabela-produtos table {
+  margin: 0;
 }
 body .container .tabela table {
   margin-top: 10px;
@@ -20,7 +31,7 @@ body .container .tabela table {
   text-align: center;
 }
 body .container .tabela table tbody {
-  max-height: 35vh;
+  max-height: 68vh;
   overflow: auto;
 }
 body .container .tabela table #codigo,
@@ -38,6 +49,9 @@ body .container .tabela table th {
 body .container .tabela table td {
   font-weight: 300;
   letter-spacing: 1px;
+}
+body .container .tabela table td:frist-child {
+  width: 11vw;
 }
 body .container .entrada {
   display: flex;
@@ -85,8 +99,20 @@ body .container .entrada .codigo-de-barra input {
   font-size: 2rem;
   text-align: center;
 }
-body .container .entrada #dinheiro {
+body .container .entrada .codigo-de-barra button {
   margin-top: 3vh;
+  height: 5vh;
+  width: 10vw;
+  border: none;
+  color: #e6e6e6;
+  background-color: #146dc7;
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+body .container .entrada .codigo-de-barra button:hover {
+  background-color: #09325c;
+}
+body .container .entrada #dinheiro {
   background-color: white;
   width: 15vw;
   height: 15vh;
@@ -104,6 +130,19 @@ body .container .entrada #dinheiro input {
   height: 9.5vh;
   font-size: 2rem;
   text-align: center;
+}
+body .container .entrada #dinheiro button {
+  margin-top: 3vh;
+  height: 5vh;
+  width: 10vw;
+  border: none;
+  color: #e6e6e6;
+  background-color: #146dc7;
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+body .container .entrada #dinheiro button:hover {
+  background-color: #09325c;
 }
 body .container .entrada #subtotal {
   margin-top: 3vh;

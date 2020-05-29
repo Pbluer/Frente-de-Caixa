@@ -7,10 +7,8 @@ function codigoDeBarra(){
     xhttp.onreadystatechange = () =>{
 
             if(xhttp.readyState === 4 && xhttp.status == 200){
-
                     document.location.reload(true);
                     console.log('Item adicionado')
-
                 }               
             }
         
@@ -31,9 +29,9 @@ window.onload = () =>{
 
             tabela.forEach(tabela => {
                 entradas += `<tr>`
-                entradas += `<td>${tabela['codigo']}</td>`
+                entradas += `<td style="width:11vw">${tabela['codigo']}</td>`
                 entradas += `<td>${tabela['produto']}</td>`
-                entradas += `<td>R$ ${tabela['valor']}</td>`
+                entradas += `<td style="width:11vw">R$ ${tabela['valor']}</td>`
                 entradas += `</tr>`
                 
             });

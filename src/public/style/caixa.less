@@ -1,3 +1,7 @@
+*::-webkit-scrollbar {
+        width: 0px;        
+    }
+
 body{
     background-color: #e6e6e6;
     text-align: center;
@@ -12,17 +16,30 @@ body{
             height: 68vh;
             background-color: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.219);
-            
+            text-align: center;
+
+            .tabela-produtos{
+                overflow: auto;
+                height: 63vh;
+                
+                
+                table{
+                    margin: 0;
+                }
+            }
+
+
             table{
                 margin-top: 10px;
                 width: 97vw;
                 max-height: 68vh;
                 text-align: center;
-
+               
                 tbody{
-                    max-height: 35vh;
+                    max-height: 68vh;
                     overflow: auto;
                 }
+
 
                 #codigo,#unitario{
                     width: 11vw;
@@ -36,9 +53,12 @@ body{
                 }
 
                 td{
-
                     font-weight: 300;
                     letter-spacing: 1px;
+                }
+
+                td:frist-child{
+                    width: 11vw;
                 }
                 
             }
@@ -94,10 +114,24 @@ body{
                     font-size: 2rem;
                     text-align: center;
                 }
+
+                button{
+                    margin-top: 3vh;
+                    height: 5vh;
+                    width: 10vw;
+                    border: none;
+                    color: #e6e6e6;
+                    background-color: #146dc7;
+                    border-radius: 10px;
+                    font-size: 1.2rem;                    
+                }
+
+                button:hover{
+                    background-color: #09325c;                   
+                }
             }
 
             #dinheiro{
-                margin-top: 3vh;
                 background-color: white;
                 width: 15vw;
                 height: 15vh;
@@ -116,6 +150,21 @@ body{
                     height: 9.5vh;
                     font-size: 2rem;
                     text-align: center;
+                }
+
+                button{
+                    margin-top: 3vh;
+                    height: 5vh;
+                    width: 10vw;
+                    border: none;
+                    color: #e6e6e6;
+                    background-color: #146dc7;
+                    border-radius: 10px;
+                    font-size: 1.2rem;                    
+                }
+
+                button:hover{
+                    background-color: #09325c;                   
                 }
             }
 
