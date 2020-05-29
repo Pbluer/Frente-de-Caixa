@@ -50,7 +50,7 @@ class DataBase{
             echo "Error: " . $sql->error;
         }  
         
-        return json_encode($produtos);
+        return json_encode($produtos,JSON_PRETTY_PRINT);
     }
 
     function codigoDeBarra($codigo){

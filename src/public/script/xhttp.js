@@ -9,3 +9,11 @@ function xmlHttpPost(url,callback,params =''){
 
     xhttp.send(params)
 }
+
+function xmlHttpGet(callback,url){
+    
+    xhttp.onreadystatechange = callback;
+
+    xhttp.open('GET',url+'.php',true)
+    xhttp.send();
+}

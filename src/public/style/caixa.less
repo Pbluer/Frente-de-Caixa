@@ -16,13 +16,18 @@ body{
             table{
                 margin-top: 10px;
                 width: 97vw;
+                max-height: 68vh;
                 text-align: center;
+
+                tbody{
+                    max-height: 35vh;
+                    overflow: auto;
+                }
 
                 #codigo,#unitario{
                     width: 11vw;
                 }
-                th
-                ,td{
+                th,td,tr{
                     border-bottom: 1px solid black;
                 }
 
@@ -35,7 +40,7 @@ body{
                     font-weight: 300;
                     letter-spacing: 1px;
                 }
-            
+                
             }
         }
 
@@ -168,10 +173,5 @@ body{
             }
             
         }
-
-
     }
-
-
-
 }

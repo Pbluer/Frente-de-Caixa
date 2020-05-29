@@ -16,14 +16,20 @@ body .container .tabela {
 body .container .tabela table {
   margin-top: 10px;
   width: 97vw;
+  max-height: 68vh;
   text-align: center;
+}
+body .container .tabela table tbody {
+  max-height: 35vh;
+  overflow: auto;
 }
 body .container .tabela table #codigo,
 body .container .tabela table #unitario {
   width: 11vw;
 }
 body .container .tabela table th,
-body .container .tabela table td {
+body .container .tabela table td,
+body .container .tabela table tr {
   border-bottom: 1px solid black;
 }
 body .container .tabela table th {

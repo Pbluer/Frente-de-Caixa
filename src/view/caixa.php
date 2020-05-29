@@ -14,22 +14,17 @@
 
     <div class="container">
         <div id="status"></div>
-        <div class="tabela">
-            <table>
-                <thead>
-                    <tr>
-                        <th id="codigo">CÓDIGO</th>
-                        <th id="produto">PRODUTO</th>
-                        <th id="unitario">UNITÁRIO</th>
-                    </tr>
-                </thead>
-                <tbody>
+        <div class="tabela" >
+            <table>                
                 <tr>
-                    <td>1234567890123</td>
-                    <td>FEIJÃO MULATINHO CAMPISTA 500G</td>
-                    <td>R$ 8,79</td>
+                    <th id="codigo">CÓDIGO</th>
+                    <th id="produto">PRODUTO</th>
+                    <th id="unitario">UNITÁRIO</th>
                 </tr>
+                <tbody id ="produtos">
+
                 </tbody>
+                                
             </table>
         </div>
 
@@ -38,7 +33,7 @@
             <div class="codigo-de-barra">
                 <h4>CÓDIGO DE BARRA</h4>
                 <input type="number" id="codigo-de-barra">
-                <button type="submit" onclick="teste()">teste</button>
+                <button type="submit" onclick="codigoDeBarra()">teste</button>
             </div>
             
             <div id="total">
