@@ -1,7 +1,22 @@
-const produto = document.getElementById('produtos');
+function reiniciar(){
+    
+}
 
 function dinheiro(){
+    const dinheiro = document.getElementById('dinheiro').value;
+    const subtotal = document.getElementById('subtotal');
 
+    xhttp.onreadystatechange = () => {
+        
+        if(xhttp.readyState === 4 && xhttp.status == 200){
+            var retorno = xhttp.responseText;             
+            subtotal.innerHTML = `R$ ${retorno}`;
+        }
+    }
+
+    xhttp.open('POST','../controller/subTotal.php');
+    xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhttp.send('dinheiro=' + encodeURIComponent(dinheiro));
 }
 
 function codigoDeBarra(){
@@ -22,9 +37,8 @@ function codigoDeBarra(){
     xhttp.send('codigo-de-barra=' + encodeURIComponent(codigoDeBarra));
 };
 
-
 window.onload = () =>{
-    
+    const produto = document.getElementById('produtos');
     xhttp.onreadystatechange = () =>{
 
         if(xhttp.readyState === 4 && xhttp.status == 200){

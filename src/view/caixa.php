@@ -1,7 +1,5 @@
-<?php
-    
-    require('../controller/valorTabela.php');
-    
+<?php    
+    require('../controller/valorTabela.php');    
 ?>
 
 <!DOCTYPE html>
@@ -53,18 +51,18 @@
             
             <div id="total">
                 <h4>TOTAL</h4>
-                <p>R$ <?= $valorTotal ? $valorTotal : '00' ?></p>
+                <p>R$ <?= $valorTotal ? $valorTotal : '0' ?></p>
             </div>
 
-            <form id="dinheiro">
+            <div class="dinheiro">
                 <h4>DINHEIRO</h4>
-                <input type="number">
-                <button onclick="codigoDeBarra()">Enviar</button>
-            </form>
+                <input type="number" id="dinheiro">
+                <button onclick="dinheiro()">Enviar</button>
+            </div>
 
-            <div id="subtotal">
+            <div class="subtotal">
                 <h4>SUBTOTAL</h4>
-                <p>R$ 8,98</p>
+                <p id="subtotal">R$ 0</p>
             </div>
 
             <div class="link">
@@ -75,7 +73,7 @@
         </div>
 
     </div>
-    
+
     <script src="../public/script/xhttp.js"></script>
     <script src="../public/script/caixa.js"></script>
 

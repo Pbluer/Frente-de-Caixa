@@ -112,26 +112,26 @@ body .container .entrada .codigo-de-barra button {
 body .container .entrada .codigo-de-barra button:hover {
   background-color: #09325c;
 }
-body .container .entrada #dinheiro {
+body .container .entrada .dinheiro {
   background-color: white;
   width: 15vw;
   height: 15vh;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.219);
 }
-body .container .entrada #dinheiro h4 {
+body .container .entrada .dinheiro h4 {
   font-size: 1.5rem;
   font-weight: bold;
   background-color: #146dc7;
   color: white;
 }
-body .container .entrada #dinheiro input {
+body .container .entrada .dinheiro input {
   border: none;
   width: 14.5vw;
   height: 9.5vh;
   font-size: 2rem;
   text-align: center;
 }
-body .container .entrada #dinheiro button {
+body .container .entrada .dinheiro button {
   margin-top: 3vh;
   height: 5vh;
   width: 10vw;
@@ -141,23 +141,23 @@ body .container .entrada #dinheiro button {
   border-radius: 10px;
   font-size: 1.2rem;
 }
-body .container .entrada #dinheiro button:hover {
+body .container .entrada .dinheiro button:hover {
   background-color: #09325c;
 }
-body .container .entrada #subtotal {
+body .container .entrada .subtotal {
   margin-top: 3vh;
   background-color: white;
   width: 15vw;
   height: 15vh;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.219);
 }
-body .container .entrada #subtotal h4 {
+body .container .entrada .subtotal h4 {
   font-size: 1.5rem;
   font-weight: bold;
   background-color: #146dc7;
   color: white;
 }
-body .container .entrada #subtotal p {
+body .container .entrada .subtotal p {
   display: flex;
   align-items: center;
   justify-content: center;
