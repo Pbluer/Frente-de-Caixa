@@ -1,5 +1,9 @@
 const produto = document.getElementById('produtos');
 
+function dinheiro(){
+
+}
+
 function codigoDeBarra(){
 
     const codigoDeBarra = document.getElementById("codigo-de-barra").value;   
@@ -13,7 +17,7 @@ function codigoDeBarra(){
             }
         
 
-    xhttp.open('POST','../database/codigoDeBarra.php');
+    xhttp.open('POST','../controller/codigoDeBarra.php');
     xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhttp.send('codigo-de-barra=' + encodeURIComponent(codigoDeBarra));
 };
@@ -35,11 +39,13 @@ window.onload = () =>{
                 entradas += `</tr>`
                 
             });
-            }                
+        }                
             produto.innerHTML = entradas;
-        }
 
-    xhttp.open('GET','../database/getTabela.php');
+        
+    }
+
+    xhttp.open('GET','../controller/getTabela.php');
     xhttp.send();
 }
 

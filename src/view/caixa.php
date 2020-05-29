@@ -1,3 +1,9 @@
+<?php
+    
+    require('../controller/valorTabela.php');
+    
+?>
+
 <!DOCTYPE html>
 <html lang="pt_BR">
 <head>
@@ -47,7 +53,7 @@
             
             <div id="total">
                 <h4>TOTAL</h4>
-                <p>R$ 8,79</p>
+                <p>R$ <?= $valorTotal ? $valorTotal : '00' ?></p>
             </div>
 
             <form id="dinheiro">
