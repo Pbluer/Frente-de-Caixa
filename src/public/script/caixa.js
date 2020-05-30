@@ -14,13 +14,15 @@ function reiniciar(){
 
 function dinheiro(){
     const dinheiro = document.getElementById('dinheiro').value;
-    const subtotal = document.getElementById('subtotal');
+    const subtotalDiv = document.getElementById('subtotal');
 
     xhttp.onreadystatechange = () => {
         
         if(xhttp.readyState === 4 && xhttp.status == 200){
-            var retorno = xhttp.responseText;             
-            subtotal.innerHTML = `R$ ${retorno}`;
+            var retorno = xhttp.responseText;
+            let subtotal = retorno.replace('.',',')
+            subtotalDiv.innerHTML = `R$ ${subtotal}`;
+            
         }
     }
 
