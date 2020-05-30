@@ -59,20 +59,20 @@ body .container .entrada {
   justify-content: space-around;
   height: 25vh;
 }
-body .container .entrada #total {
+body .container .entrada .total {
   margin-top: 3vh;
   background-color: white;
   width: 15vw;
   height: 15vh;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.219);
 }
-body .container .entrada #total h4 {
+body .container .entrada .total h4 {
   font-size: 1.5rem;
   font-weight: bold;
   background-color: #146dc7;
   color: white;
 }
-body .container .entrada #total p {
+body .container .entrada .total p {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,7 +80,6 @@ body .container .entrada #total p {
   height: 10vh;
 }
 body .container .entrada .codigo-de-barra {
-  margin-top: 3vh;
   background-color: white;
   width: 20vw;
   height: 15vh;

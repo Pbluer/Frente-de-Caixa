@@ -1,5 +1,15 @@
 function reiniciar(){
     
+    xhttp.onreadystatechange = () => {
+        
+        if(xhttp.readyState === 4 && xhttp.status == 200){
+            document.location.reload(true);
+        }
+    }
+
+    xhttp.open('GET','../controller/reiniciar.php');
+    xhttp.send();
+    
 }
 
 function dinheiro(){
@@ -26,24 +36,40 @@ function codigoDeBarra(){
     xhttp.onreadystatechange = () =>{
 
             if(xhttp.readyState === 4 && xhttp.status == 200){
-                    document.location.reload(true);
-                    console.log('Item adicionado')
+                    window.location.reload();
                 }               
             }
-        
 
     xhttp.open('POST','../controller/codigoDeBarra.php');
     xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhttp.send('codigo-de-barra=' + encodeURIComponent(codigoDeBarra));
 };
 
-window.onload = () =>{
+function valorTabela(){
+
+    let total = document.getElementById('total');
+
+    xhttp.onreadystatechange = () => {
+
+        if(xhttp.readyState == 4 && xhttp.status === 200){
+            var valorTotal = parseInt(xhttp.responseText);
+            total.innerHTML = `R$ ${valorTotal}`;            
+        }
+    }
+
+    xhttp.open('GET','../controller/valorTabela.php');
+    xhttp.send();
+}
+
+function carregarTabela(){
     const produto = document.getElementById('produtos');
+    
     xhttp.onreadystatechange = () =>{
 
         if(xhttp.readyState === 4 && xhttp.status == 200){
             var tabela = JSON.parse(xhttp.responseText)
             var entradas = ``;
+            var valor = [];            
 
             tabela.forEach(tabela => {
                 entradas += `<tr>`
@@ -51,15 +77,19 @@ window.onload = () =>{
                 entradas += `<td>${tabela['produto']}</td>`
                 entradas += `<td style="width:11vw">R$ ${tabela['valor']}</td>`
                 entradas += `</tr>`
-                
+                valor.push(tabela['valor']);                
             });
-        }                
-            produto.innerHTML = entradas;
 
-        
+            produto.innerHTML = entradas;          
+        }         
+          
     }
 
     xhttp.open('GET','../controller/getTabela.php');
     xhttp.send();
+}
+
+window.onload = () =>{
+    carregarTabela();
 }
 

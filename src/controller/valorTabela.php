@@ -10,4 +10,3 @@ foreach($tabela as $valor){
 }
 
 $valorTotal = str_replace('.',',',array_sum($valores));
-

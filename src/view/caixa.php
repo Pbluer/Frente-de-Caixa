@@ -44,14 +44,15 @@
 
         <div class="entrada">
             
-            <form onsubmit="codigoDeBarra()" class="codigo-de-barra">
+            <div class="codigo-de-barra">
                 <h4>CÓDIGO DE BARRA</h4>
-                <input type="number" id="codigo-de-barra" >                
-            </form>
+                <input type="number" id="codigo-de-barra">   
+                <button onclick="codigoDeBarra()">Enviar</button>             
+            </div>
             
-            <div id="total">
+            <div class="total">
                 <h4>TOTAL</h4>
-                <p>R$ <?= $valorTotal ? $valorTotal : '0' ?></p>
+                <p id="total">R$ <?= $valorTotal ? $valorTotal : '0' ?></p>
             </div>
 
             <div class="dinheiro">
@@ -66,8 +67,8 @@
             </div>
 
             <div class="link">
-                <button id="cancelar">CANCELAR</button>
-                <button id="concluir">CONCLUIR</button>
+                <button id="cancelar" onclick="valorTabela()">CANCELAR</button>
+                <button id="concluir" onclick="reiniciar()">CONCLUIR</button>
                 <a href="#"><img src="../public/img/direcao.svg" alt="voltar"></a>
             </div>
         </div>

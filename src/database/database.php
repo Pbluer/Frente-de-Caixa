@@ -15,7 +15,7 @@ class DataBase{
     
     }
 
-    function getProdutos(){
+    public static function getProdutos(){
 
         $query = "SELECT * FROM produto";
         $sql = DataBase::conexao();
@@ -34,7 +34,7 @@ class DataBase{
         return $produtos;
     }
 
-    function getTabela(){
+    public static function getTabela(){
 
         $query = "SELECT * FROM tabela";
         $sql = DataBase::conexao();
@@ -53,7 +53,7 @@ class DataBase{
         return $produtos;
     }
 
-    function codigoDeBarra($codigo){
+    public static function codigoDeBarra($codigo){
         
         $sql = DataBase::conexao();
         $query = "INSERT INTO `produtos`.`tabela` (`codigo`, `produto`,`valor`) SELECT `codigo`,`produto`,`valor` FROM `produtos`.`produto` WHERE  (`codigo` = $codigo);";        
@@ -64,6 +64,21 @@ class DataBase{
         }elseif($sql->error){
             echo "Error: " . $sql->error;
         }
+    }    
+
+    public static function zeraTabela(){
+        
+        $sql = DataBase::conexao();
+
+        $query = "TRUNCATE TABLE tabela";
+
+        $resultado = $sql->query($query);
+
+        if($resultado){
+            echo 'Foi';
+        }else{
+            mysqli_errno($resultado);
+        }
+
     }
-    
 }
