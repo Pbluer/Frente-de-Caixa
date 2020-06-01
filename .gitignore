@@ -5,3 +5,6 @@ caixa.less
 home.less
 index.less
 login.less
+estoque.less
+adicionar.less
+excluir.less
