@@ -1,0 +1,90 @@
+body {
+  background-color: #636363;
+  height: 100vh;
+}
+body header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 9vh;
+  padding: 0 10px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+body header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+body header nav {
+  display: inline-flex;
+  max-width: 20vw;
+}
+body header nav a {
+  margin-right: 20px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #636363;
+}
+body header nav a:hover {
+  border-bottom: 2px solid #636363;
+}
+body header nav :first-child {
+  border-bottom: 2px solid black;
+}
+body .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  height: 91vh;
+}
+body .container .tabela {
+  margin: 20px;
+  width: 97vw;
+  height: 80vh;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.219);
+  text-align: center;
+}
+body .container .tabela .tabela-produtos {
+  overflow: auto;
+  height: 75vh;
+}
+body .container .tabela .tabela-produtos table {
+  margin: 0;
+}
+body .container .tabela table {
+  margin-top: 10px;
+  width: 97vw;
+  max-height: 68vh;
+  text-align: center;
+  color: #636363;
+}
+body .container .tabela table tbody {
+  max-height: 68vh;
+  overflow: auto;
+}
+body .container .tabela table #codigo {
+  width: 14vw;
+}
+body .container .tabela table #unitario {
+  width: 10vw;
+}
+body .container .tabela table th,
+body .container .tabela table td,
+body .container .tabela table tr {
+  border-bottom: 1px solid black;
+}
+body .container .tabela table th {
+  font-weight: 600;
+}
+body .container .tabela table td {
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+body .container .tabela table td:frist-child {
+  width: 11vw;
+}

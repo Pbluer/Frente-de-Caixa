@@ -1,0 +1,36 @@
+body {
+  background-color: #636363;
+  height: 100vh;
+}
+body header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 9vh;
+  padding: 0 10px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+body header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #636363;
+}
+body header nav {
+  display: inline-flex;
+  max-width: 20vw;
+}
+body header nav a {
+  margin-right: 20px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #636363;
+}
+body header nav a:hover {
+  border-bottom: 2px solid #636363;
+}
+body header nav :nth-child(2) {
+  border-bottom: 2px solid black;
+}

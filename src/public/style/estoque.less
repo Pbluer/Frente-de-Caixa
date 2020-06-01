@@ -1,0 +1,106 @@
+body{
+    background-color: #636363;
+    height: 100vh;
+
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 9vh;
+        padding: 0 10px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.50);
+
+        h1{
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        nav{
+            display: inline-flex;
+            max-width: 20vw;
+
+            a{
+                margin-right: 20px;
+                text-decoration: none;
+                font-size: 1.1rem;
+                color: #636363;
+            }
+            a:hover{
+                border-bottom: 2px solid #636363;
+            }
+
+            :first-child{
+                border-bottom: 2px solid black;
+            }
+
+        }
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        height: 91vh;
+
+        .tabela{
+            margin: 20px;
+            width: 97vw;
+            height: 80vh;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.219);
+            text-align: center;
+
+            .tabela-produtos{
+                overflow: auto;
+                height: 75vh;                
+                
+                table{
+                    margin: 0;
+                }
+            }
+
+            table{
+                margin-top: 10px;
+                width: 97vw;
+                max-height: 68vh;
+                text-align: center;
+                color: #636363;
+               
+                tbody{
+                    max-height: 68vh;
+                    overflow: auto;
+                }
+
+                #codigo{
+                    width: 14vw;
+                }
+                
+                #unitario{
+                    width: 10vw;
+                }
+                th,td,tr{
+                    border-bottom: 1px solid black;
+                }
+
+                th{
+                    font-weight: 600;
+                }
+
+                td{
+                    font-weight: 300;
+                    letter-spacing: 1px;
+                }
+
+                td:frist-child{
+                    width: 11vw;
+                }
+                
+            }
+        }
+    }
+}

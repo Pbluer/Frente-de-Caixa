@@ -82,10 +82,20 @@ class DataBase{
 
     }
     
-    public static function login(){
+    public static function login($login,$password){
         
         $sql = self::conexao();
-        $query = "SELECT ";
+        $query = "SELECT `login`,`password` FROM `user` WHERE ('login' = '{$login}' and 'password' = '{$password}') LIMIT 1";
+        $resultado = $sql->query($query);
+        $login = [];
+
+        if($resultado->num_rows > 0){
+            echo 'Foi';
+        }else{
+            mysqli_error($sql);
+        }
         
     }
 }
+
+DataBase::login('ramon123','03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4');

@@ -1,6 +1,16 @@
 <?php 
 
-require("src/controller/login.php");
+require("src/database/database.php");
+
+if(isset($_POST['login']) && isset($_POST['password'])){
+
+    $login = $_POST['login'];
+    $password = $_POST['password'];
+
+    $senhahash = hash('sha256',$login);
+
+    echo DataBase::login($login,$senhahash);
+}
 
 ?>
 
@@ -17,8 +27,8 @@ require("src/controller/login.php");
     <title>Frente-de-Caixa</title>   
 </head>
 <body>    
-    <div methods="POST" class="container">        
-        <form class="login">
+    <div class="container">        
+        <form method="POST" class="login">
             <p></p>
             <input type="text" name="login" id="login" placeholder="LOGIN :">            
             <input type="text" name="password" id="password" placeholder="SENHA :">

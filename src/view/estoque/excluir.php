@@ -1,6 +1,3 @@
-<?php
-require_once('C:\xampp\htdocs\Frente-de-Caixa\src\controller\controller.php');
-?>
 <!DOCTYPE html>
 <html lang="pt_BR">
 <head>
@@ -14,18 +11,5 @@ require_once('C:\xampp\htdocs\Frente-de-Caixa\src\controller\controller.php');
     <title>Frente-de-Caixa</title>    
 </head>
 <body>
-    
-    <div class="container">
-
-        <header>
-            <h1>MERCADO DA ESQUINA</h1>
-        </header>
-
-        <div>
-            <a class="estilo-btn" id="estoque" href="estoque.php">Estoque <img src="../public/img/estoque.svg" alt="Estoque"></a>
-            <a class="estilo-btn" id="caixa" href="caixa.php">Caixa <img src="../public/img/caixa.svg" alt="Caixa"></a>
-        </div>
         
-    </div>
 </body>
-</html>
