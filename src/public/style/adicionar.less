@@ -21,7 +21,7 @@ body{
         
         nav{
             display: inline-flex;
-            max-width: 20vw;
+            max-width: 25vw;
 
             a{
                 margin-right: 20px;
@@ -33,11 +33,51 @@ body{
                 border-bottom: 2px solid #636363;
             }
 
-            :nth-child(2){
+            :nth-child(3){
                 border-bottom: 2px solid black;
             }
 
         }
     }
 
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 91vh;
+
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.50);
+            font-size: 1.1rem;
+            color: #636363;
+            height: 45vh;
+            width: 20vw;
+            border-radius: 10px;
+
+            label{
+                margin: 5px 0 10px 0;
+            }
+
+            input{
+                height: 3vh;
+                font-size: 1.2rem;
+            }
+
+            button{
+                border: none;
+                background-color: #636363;
+                color: white;
+                width: 10vw;
+                height: 5vh;
+                margin-top: 20px;
+                box-shadow: 0 0 6px rgba(0, 0, 0, 0.50);
+            }
+        }
+    }
 }

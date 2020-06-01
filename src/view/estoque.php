@@ -23,6 +23,7 @@ $produtos = DataBase::getProdutos();
     <header>
         <h1>Estoque</h1>
         <nav>
+            <a href="home.php">Inicio</a>
             <a>Estoque</a>
             <a href="adicionar.php">Adicionar</a>
             <a href="#">Excluir</a>

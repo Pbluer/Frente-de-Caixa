@@ -96,6 +96,19 @@ class DataBase{
         }
         
     }
+
+    public static function adicionarProduto($codigo,$produto,$valor){
+
+        $sql = self::conexao();
+        $query = "INSERT INTO `produtos`.`produto` (`codigo`, `produto`, `valor`) VALUES ('$codigo', '$produto', '$valor')";
+        $resultado = $sql->query($query);
+
+        if($resultado){            
+            header('Location: http://localhost/frente-de-caixa/src/view/estoque.php');
+        }else{
+            mysqli_errno($sql);
+        }
+
+    }
 }
 
-DataBase::login('ramon123','03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4');
