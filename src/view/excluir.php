@@ -15,7 +15,7 @@ $produtos = DataBase::getProdutos();
     <meta name="keywords" content="Frente de Caixa,Caixa,Projeto Pessoal,PHP">
     <meta name="author" content="https://twitter.com/RamonVLima">
     <link rel="stylesheet" href="../public/style/reset.css">
-    <link rel="stylesheet" href="./../public/style/estoque.css">
+    <link rel="stylesheet" href="./../public/style/excluir.css">
     <title>Frente-de-Caixa</title>
 </head>
 <body>
@@ -26,7 +26,7 @@ $produtos = DataBase::getProdutos();
             <a href="../../index.php">Inicio</a>
             <a>Estoque</a>
             <a href="adicionar.php">Adicionar</a>
-            <a href="excluir.php">Excluir</a>
+            <a href="#">Excluir</a>
             </ul>
         </nav>
     </header>
@@ -40,6 +40,7 @@ $produtos = DataBase::getProdutos();
                             <th id="codigo">CÓDIGO</th>
                             <th id="produto">PRODUTO</th>
                             <th id="unitario">UNITÁRIO</th>
+                            <th id="excluir">Excluir</th>
                         </tr>
                     </table>
                 </td>
@@ -53,6 +54,7 @@ $produtos = DataBase::getProdutos();
                                     <td id="codigo"><?= $produto['codigo'] ?></td>
                                     <td><?= $produto['produto'] ?></td>
                                     <td id="unitario">R$ <?= $produto['valor'] ?></td>
+                                    <td class="excluir" ><a href="../controller/excluir.php?codigo=<?= $produto['codigo'] ?>">X</a></td>
                                 </tr>
                             <?php endforeach ?>
                         </table>

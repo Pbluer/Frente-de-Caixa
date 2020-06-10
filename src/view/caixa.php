@@ -69,7 +69,7 @@
             <div class="link">
                 <button id="cancelar" onclick="reiniciar()">CANCELAR</button>
                 <button id="concluir" onclick="reiniciar()">CONCLUIR</button>
-                <a href="home.php"><img src="../public/img/direcao.svg" alt="voltar"></a>
+                <a href="../../index.php"><img src="../public/img/direcao.svg" alt="voltar"></a>
             </div>
         </div>
 

@@ -31,7 +31,7 @@ body header nav a {
 body header nav a:hover {
   border-bottom: 2px solid #636363;
 }
-body header nav :nth-child(2) {
+body header nav :nth-child(4) {
   border-bottom: 2px solid black;
 }
 body .container {

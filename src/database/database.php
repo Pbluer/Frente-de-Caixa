@@ -110,5 +110,20 @@ class DataBase{
         }
 
     }
+
+
+    public static function excluirProduto($codigo){
+        
+        $sql = self::conexao();
+        $query = "DELETE FROM `produto` WHERE (codigo = '{$codigo}')";
+        $resultado = $sql->query($query);
+
+        if($resultado){
+            header('Location: http://localhost/frente-de-caixa/src/view/estoque.php');        
+        }else{
+            mysqli_errno($sql);
+        }
+
+    }
 }
 

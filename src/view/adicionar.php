@@ -27,10 +27,10 @@
     <header>
         <h1>Estoque</h1>
         <nav>
-            <a href="home.php">Home</a>
+            <a href="../../index.php">Inicio</a>
             <a href="estoque.php">Estoque</a>
             <a>Adicionar</a>
-            <a href="#">Excluir</a>
+            <a href="excluir.php">Excluir</a>
             </ul>
         </nav>
     </header>

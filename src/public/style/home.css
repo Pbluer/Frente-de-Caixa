@@ -1,8 +1,17 @@
 body {
+  height: 100vw;
+  overflow: hidden;
   color: white;
   background-color: #636363;
 }
+body .container {
+  height: 100vh;
+  background-image: url("../img/fundo.png");
+  background-size: 100%;
+  background-color: black;
+}
 body .container header {
+  padding-top: 10vh;
   font-weight: 700;
 }
 body .container header h1 {

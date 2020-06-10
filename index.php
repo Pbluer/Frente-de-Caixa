@@ -1,40 +1,31 @@
-<?php 
-
-require("src/database/database.php");
-
-if(isset($_POST['login']) && isset($_POST['password'])){
-
-    $login = $_POST['login'];
-    $password = $_POST['password'];
-
-    $senhahash = hash('sha256',$login);
-
-    echo DataBase::login($login,$senhahash);
-}
-
+<?php
+require_once('C:\xampp\htdocs\Frente-de-Caixa\src\controller\controller.php');
 ?>
-
 <!DOCTYPE html>
 <html lang="pt_BR">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Projeto pessoal: Frente de Caixa">
     <meta name="keywords" content="Frente de Caixa,Caixa,Projeto Pessoal,PHP">
     <meta name="author" content="https://twitter.com/RamonVLima">
-    <link rel="stylesheet" href="./src/public/style/reset.css">
-    <link rel="stylesheet" href="./src/public/style/login.css">
-    <title>Frente-de-Caixa</title>   
+    <link rel="stylesheet" href="src/public/style/reset.css">
+    <link rel="stylesheet" href="src/public/style/home.css">
+    <title>Frente-de-Caixa</title>    
 </head>
-<body>    
-    <div class="container">        
-        <form method="POST" class="login">
-            <p></p>
-            <input type="text" name="login" id="login" placeholder="LOGIN :">            
-            <input type="text" name="password" id="password" placeholder="SENHA :">
-            <button>ENTRA</button>
-        </form>
-    </div>
+<body>
+    
+    <div class="container">
 
+        <header>
+            <h1>MERCADO DA ESQUINA</h1>
+        </header>
+
+        <div>
+            <a class="estilo-btn" id="estoque" href="src/view/estoque.php">Estoque <img src="src/public/img/estoque.svg" alt="Estoque"></a>
+            <a class="estilo-btn" id="caixa" href="src/view/caixa.php">Caixa <img src="src/public/img/caixa.svg" alt="Caixa"></a>
+        </div>
+        
+    </div>
 </body>
 </html>
