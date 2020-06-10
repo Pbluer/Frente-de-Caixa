@@ -18,7 +18,7 @@ require_once('C:\xampp\htdocs\Frente-de-Caixa\src\controller\controller.php');
     <div class="container">
 
         <header>
-            <h1>MERCADO DA ESQUINA</h1>
+            <h1>PADARIA DA ESQUINA</h1>
         </header>
 
         <div>
