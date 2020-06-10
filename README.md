@@ -1,9 +1,9 @@
-#Frente de Caixa
+# Frente de Caixa
 ![interface image](https://github.com/Pbluer/Frente-de-Caixa/blob/master/template/web.jpg)
 
 ----
 
-###Por que um frente de caixa?
+### Por que um frente de caixa?
 
 > Após eu ter finalizado o  [todo-list](https://en.wikipedia.org/wiki/Markdown) eu não tinha mais nenhuma outra ideia de projeto pessoal para eu fazer,então pedi sugestão a um grupo no [telegram](http://t.me/CodeWalkersDevs) e um dos membros me sugeriu que eu fizesse um todo-list.
 
